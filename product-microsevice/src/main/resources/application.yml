@@ -1,0 +1,24 @@
+server:
+  port: 8084
+  compression:
+    enabled: true
+
+
+
+spring:
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MYSQL5InnoDb
+  datasource:
+    url: jdbc:mysql://mysqldb:3306/products  # Note the updated port.
+    username: root
+    password: your_password
+  jakarta:
+    persistence:
+      jdbc:
+        url: jdbc:mysql://mysqldb:3306/products
+  jpa:
+    hibernate:
+      ddl-auto: create
+
